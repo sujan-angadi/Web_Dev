@@ -1,0 +1,201 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+    
+    main {
+      min-height: 100vh;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5%;
+    }
+    
+    .logo {
+      width: 180px;
+      height: auto;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .lang, .sign {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .lang {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.548);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .sign {
+      background-color: #e50914;
+      border: 1px solid #e50914;
+      color: white;
+    }
+    
+    .lang:hover, .sign:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+    
+    /* MAIN CONTENT */
+    .heading {
+      text-align: center;
+      margin: auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .heading h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .heading h5 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    
+    .heading p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .input {
+      width: 100%;
+      max-width: 450px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      padding: 0 15px;
+    }
+    
+    .get {
+      padding: 12px 24px;
+      border: none;
+      background-color: #e50914;
+      color: white;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .get:hover {
+      background-color: #f40612;
+      transform: scale(1.05);
+    }
+    
+    /* RESPONSIVE DESIGN */
+    @media (min-width: 768px) {
+      .email-form {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .input {
+        width: 60%;
+      }
+      
+      .get {
+        width: auto;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .logo {
+        width: 150px;
+      }
+      
+      .heading h1 {
+        font-size: 1.8rem;
+      }
+      
+      .heading h5 {
+        font-size: 1.2rem;
+      }
+      
+      .heading p {
+        font-size: 1rem;
+      }
+      
+      .input, .get {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+      
+      .lang, .sign {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .heading h1 {
+        font-size: 1.5rem;
+      }
+      
+      .heading h5 {
+        font-size: 1rem;
+      }
+      
+      .input, .get {
+        height: 45px;
+      }
+    }
